@@ -12,12 +12,9 @@ class Server {
         this.server = http.createServer(this.app);
         this.io = socketio(this.server, {
             cors: {
+                origin: false,
                 methods: ["GET", "POST"],
             },
-        });
-
-        const io = require("socket.io")(httpServer, {
-            cors: {},
         });
     }
 
