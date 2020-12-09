@@ -12,7 +12,7 @@ class Server {
     }
 
     middlewares() {
-        this.app.use("/app", express.static(path.resolve(__dirname, "../public")));
+        this.app.use("/", express.static(path.resolve(__dirname, "../public")));
     }
     configurarSockets() {
         new Socket(this.io);
